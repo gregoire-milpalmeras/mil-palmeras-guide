@@ -389,7 +389,7 @@ function openModal(idx){
 
   document.getElementById('m-name').textContent = p.name;
   document.getElementById('m-name').style.color = color;
-  document.getElementById('m-desc').textContent = p.desc;
+  document.getElementById('m-desc').textContent = p.descLong || p.desc;
 
   let badges = '';
   if(p.tested) badges += `<span class="b b-tested" style="background:${color}">${STAR} Testé &amp; approuvé</span> `;

@@ -81,7 +81,8 @@ const PLACES = [
   {
     region: 'r1', catg: 'À pied de la maison',
     name: 'Chiringuito Sunshine',
-    desc: 'Bar de plage incontournable : tapas variées (croquetas, bicyclettas — spécialité locale à base de salade russe), pan con tomate, paellas généreuses et sangria maison. Prix raisonnables et concerts réguliers en terrasse — une vraie ambiance de vacances !',
+    desc: 'Bar de plage incontournable : tapas et sangria maison',
+    descLong: 'Bar de plage incontournable : tapas variées (croquetas, bicyclettas — spécialité locale à base de salade russe), pan con tomate, paellas généreuses et sangria maison. Prix raisonnables et concerts réguliers en terrasse — une vraie ambiance de vacances !',
     dist: '', type: 'restaurant',
     walk: true, tested: true, avoid: false,
     photos: []
@@ -210,7 +211,7 @@ const PLACES = [
     region: 'r2', catg: 'Adresses Insolites',
     name: 'Beton Brut (Alicante)',
     desc: 'Bar/terrasse ultra-moderne sur le port, coucher de soleil chic',
-    dist: '60 km · 50 min', type: 'insolite',
+    dist: '60 km · 50 min', type: 'restaurant',
     walk: false, tested: false, avoid: false,
     photos: []
   },
@@ -218,7 +219,7 @@ const PLACES = [
     region: 'r2', catg: 'Adresses Insolites',
     name: 'Voltereta Tanzania',
     desc: 'Dîner dans une tente safari au milieu d\'une jungle reconstituée',
-    dist: '62 km · 55 min', type: 'insolite',
+    dist: '62 km · 55 min', type: 'restaurant',
     walk: false, tested: false, avoid: false,
     photos: []
   },
@@ -288,9 +289,25 @@ const PLACES = [
   },
   {
     region: 'r4', catg: 'Villages Carte Postale',
-    name: 'Altea (El Cranc / El Sigarro)',
-    desc: 'Vieux village tout blanc & restaurants de plage mythiques',
+    name: 'Altea',
+    desc: 'Vieux village tout blanc perché, ruelles pavées fleuries, dôme bleu de l\'église Nuestra Señora del Consuelo. L\'un des plus beaux villages de la Costa Blanca.',
     dist: '115 km · 1h20', type: 'culture',
+    walk: false, tested: false, avoid: false,
+    photos: []
+  },
+  {
+    region: 'r4', catg: 'Restaurants de Plage',
+    name: 'El Cranc (Playa de l\'Olla, Altea)',
+    desc: 'Restaurant les pieds presque dans l\'eau, réputé pour ses paellas et arroces. Cadre superbe, prix plus élevés — réservation conseillée.',
+    dist: '115 km · 1h20', type: 'restaurant',
+    walk: false, tested: false, avoid: false,
+    photos: []
+  },
+  {
+    region: 'r4', catg: 'Restaurants de Plage',
+    name: 'El Sigarro (Playa de l\'Olla, Altea)',
+    desc: 'Chiringuito familial juste à côté d\'El Cranc — paellas cuites au feu de bois, ambiance décontractée, parfait avec des enfants.',
+    dist: '115 km · 1h20', type: 'restaurant',
     walk: false, tested: false, avoid: false,
     photos: []
   },
@@ -329,7 +346,8 @@ const PLACES = [
   {
     region: 'r4', catg: 'Criques & Plages',
     name: 'Cueva de las Calaveras (Benidoleig)',
-    desc: 'La \'Grotte des Crânes\' doit son nom à la découverte en 1768 de 12 squelettes dans ses profondeurs. Refuge de l\'homme du Paléolithique il y a 100 000 ans, cette cavité aux plafonds atteignant 50m abrite stalactites, stalagmites et le magnifique lac Toll Blau en bout de parcours. 400m visitables, idéal en famille. Entrée ~5€. À combiner avec le Jardin de l\'Albarda tout proche.',
+    desc: 'La \'Grotte des Crânes\' — stalactites et lac souterrain Toll Blau',
+    descLong: 'La \'Grotte des Crânes\' doit son nom à la découverte en 1768 de 12 squelettes dans ses profondeurs. Refuge de l\'homme du Paléolithique il y a 100 000 ans, cette cavité aux plafonds atteignant 50m abrite stalactites, stalagmites et le magnifique lac Toll Blau en bout de parcours. 400m visitables, idéal en famille. Entrée ~5€. À combiner avec le Jardin de l\'Albarda tout proche.',
     dist: '130 km · 1h30', type: 'nature',
     walk: false, tested: false, avoid: false,
     photos: []
@@ -337,7 +355,8 @@ const PLACES = [
   {
     region: 'r4', catg: 'Criques & Plages',
     name: 'Jardin de l\'Albarda (Pedreguer)',
-    desc: 'Niché entre Dénia et Javea au pied du Montgó, ce jardin de référence mondiale regroupe plus de 700 espèces méditerranéennes sur 50 000 m². Créé en 1990, il recrée l\'esprit des jardins renaissants valenciaux à influence arabe : pergolas, fontaines, bassins aux nénuphars, paons en liberté. Concerts en soirée l\'été (Atardeceres Musicales). Entrée 7-9€, ouvert toute l\'année.',
+    desc: 'Jardin méditerranéen de référence, 700 espèces, paons en liberté',
+    descLong: 'Niché entre Dénia et Javea au pied du Montgó, ce jardin de référence mondiale regroupe plus de 700 espèces méditerranéennes sur 50 000 m². Créé en 1990, il recrée l\'esprit des jardins renaissants valenciaux à influence arabe : pergolas, fontaines, bassins aux nénuphars, paons en liberté. Concerts en soirée l\'été (Atardeceres Musicales). Entrée 7-9€, ouvert toute l\'année.',
     dist: '145 km · 1h40', type: 'nature',
     walk: false, tested: false, avoid: false,
     photos: []
@@ -345,7 +364,8 @@ const PLACES = [
   {
     region: 'r4', catg: 'Criques & Plages',
     name: 'Santuario de Santa María Magdalena (Novelda)',
-    desc: 'Perché sur la colline de La Mola, ce sanctuaire moderniste conçu par José Sala Sala (inspiré de Gaudí) est l\'un des trésors architecturaux les plus surprenants de la province. Deux tours de 25m, façades de pierres et tuiles polychromes, intérieur en forme de jarre. Vue époustouflante sur la vallée du Vinalopó. Un orgue entièrement en marbre est en cours de création. Accès libre.',
+    desc: 'Sanctuaire moderniste inspiré de Gaudí, vue sur la vallée du Vinalopó',
+    descLong: 'Perché sur la colline de La Mola, ce sanctuaire moderniste conçu par José Sala Sala (inspiré de Gaudí) est l\'un des trésors architecturaux les plus surprenants de la province. Deux tours de 25m, façades de pierres et tuiles polychromes, intérieur en forme de jarre. Vue époustouflante sur la vallée du Vinalopó. Un orgue entièrement en marbre est en cours de création. Accès libre.',
     dist: '75 km · 55 min', type: 'culture',
     walk: false, tested: false, avoid: false,
     photos: []
@@ -353,7 +373,8 @@ const PLACES = [
   {
     region: 'r1', catg: 'Musées & Loisirs',
     name: 'Catedral del Salvador (Orihuela)',
-    desc: 'Bâtie au XIII° siècle sur l\'emplacement d\'une ancienne mosquée, la Catedral del Salvador est un chef-d\'oeuvre gothique catalan rehaussé d\'influences mudéjares. Ses portails Renaissance et ses chapelles ornées en font l\'une des cathédrales les plus remarquables de la région. Le musée diocésano abrite un tableau de Velázquez rarissime. Entrée 2€.',
+    desc: 'Cathédrale gothique du XIII° siècle, musée diocésano avec un Velázquez',
+    descLong: 'Bâtie au XIII° siècle sur l\'emplacement d\'une ancienne mosquée, la Catedral del Salvador est un chef-d\'oeuvre gothique catalan rehaussé d\'influences mudéjares. Ses portails Renaissance et ses chapelles ornées en font l\'une des cathédrales les plus remarquables de la région. Le musée diocésano abrite un tableau de Velázquez rarissime. Entrée 2€.',
     dist: '28 km · 28 min', type: 'culture',
     walk: false, tested: false, avoid: false,
     photos: []
@@ -361,7 +382,8 @@ const PLACES = [
   {
     region: 'r1', catg: 'Nature & Curiosités',
     name: 'Cuevas del Rodeo & Rodearte (Rojales)',
-    desc: 'Creusées entre le XVIII° et XX° siècle, ces maisons troglodytes blanchies à la chaux sont aujourd\'hui occupées par des artistes et artisans. Galeries d\'art, ateliers de céramique, marché artisanal le 1er dimanche du mois. La cave n°6 sert d\'office de tourisme, la n°4 accueille des expositions permanentes. Un lieu hors du temps au bord du Segura.',
+    desc: 'Maisons troglodytes occupées par des artistes, galeries d\'art',
+    descLong: 'Creusées entre le XVIII° et XX° siècle, ces maisons troglodytes blanchies à la chaux sont aujourd\'hui occupées par des artistes et artisans. Galeries d\'art, ateliers de céramique, marché artisanal le 1er dimanche du mois. La cave n°6 sert d\'office de tourisme, la n°4 accueille des expositions permanentes. Un lieu hors du temps au bord du Segura.',
     dist: '28 km · 30 min', type: 'insolite',
     walk: false, tested: false, avoid: false,
     photos: []
@@ -369,7 +391,8 @@ const PLACES = [
   {
     region: 'r4', catg: 'Criques & Plages',
     name: 'El Cau — Musée de sculptures (Elche)',
-    desc: 'Caché dans les montagnes près d’Elche, ce musée en plein air totalement insolite regroupe plus de 100 sculptures en pierre peintes et taillées par l’artiste local Mariano Ros entre 2000 et 2008. Les oeuvres représentent les monuments et symboles de la région — la Palmeraíe, la Dama de Elche, la Basílica... Vue panoramique sur les montagnes et Elche. Accès libre toute l’année, prévoir de l’eau. Souvent désert : juste le chant des oiseaux et la brise des montagnes.',
+    desc: 'Musée en plein air, 100+ sculptures dans les montagnes, accès libre',
+    descLong: 'Caché dans les montagnes près d’Elche, ce musée en plein air totalement insolite regroupe plus de 100 sculptures en pierre peintes et taillées par l’artiste local Mariano Ros entre 2000 et 2008. Les oeuvres représentent les monuments et symboles de la région — la Palmeraíe, la Dama de Elche, la Basílica... Vue panoramique sur les montagnes et Elche. Accès libre toute l’année, prévoir de l’eau. Souvent désert : juste le chant des oiseaux et la brise des montagnes.',
     dist: '55 km · 50 min', type: 'insolite',
     walk: false, tested: false, avoid: false,
     photos: []
@@ -529,15 +552,15 @@ const PLACES = [
   {
     region: 'r6', catg: 'Sites Historiques',
     name: 'Théâtre Romain de Carthagène',
-    desc: 'Découvert en 1988 — accès par un tunnel sous une église',
+    desc: 'Découvert par hasard en 1988, ce théâtre du Ier siècle av. J.-C. (7000 places) se visite via le Musée Rafael Moneo, Plaza del Ayuntamiento — un tunnel sous la Cathédrale Vieille y mène. Accès aussi possible en descendant la Calle de Osario depuis le mirador du Parque Torres. Ne pas confondre avec l\'Amphithéâtre (juste à côté, entrée différente).',
     dist: '45 km · 35 min', type: 'culture',
     walk: false, tested: false, avoid: false,
     photos: []
   },
   {
     region: 'r6', catg: 'Sites Historiques',
-    name: 'Ruines de l\'Amphithéâtre',
-    desc: 'Fouilles sous les anciennes arènes — les couches de l\'histoire',
+    name: 'Amphithéâtre Romain de Carthagène',
+    desc: 'Caché depuis des siècles sous l\'ancienne Plaza de Toros, cet amphithéâtre elliptique (Ier siècle apr. J.-C., ~10 000 places) accueillait les combats de gladiateurs. Visites guidées gratuites le week-end (réservation en ligne, places limitées) — entrée Calle Doctor Fleming, près de l\'Ascenseur Panoramique. Site distinct du Théâtre Romain, situé sur la même colline.',
     dist: '46 km · 38 min', type: 'culture',
     walk: false, tested: false, avoid: false,
     photos: []
@@ -596,6 +619,46 @@ const PLACES = [
     desc: 'Accès direct Musée Marine, quai & centre piéton',
     dist: '', type: 'insolite',
     walk: false, tested: true, avoid: false,
+    photos: []
+  },
+  {
+    region: 'r4', catg: 'Criques & Plages',
+    name: 'Cala del Portitxolet (Moraira)',
+    desc: 'Petite crique rocheuse cachée près du port de Moraira, accessible par un escalier depuis le mirador. Eaux cristallines idéales pour le snorkeling, ambiance locale et tranquille.',
+    dist: '130 km · 1h35', type: 'plage',
+    walk: false, tested: false, avoid: false,
+    photos: []
+  },
+  {
+    region: 'r1', catg: 'Marchés & Shopping',
+    name: 'Grand Marché de Torrevieja (Parque Antonio Soria)',
+    desc: 'Tous les vendredis (même fériés), 8h-14h. L\'un des plus grands mercadillos de la Costa Blanca — jusqu\'à 700 étals : fruits et légumes locaux, vêtements, chaussures. Parking gratuit sur place.',
+    dist: '20 km · 20 min', type: 'insolite',
+    walk: false, tested: false, avoid: false,
+    photos: []
+  },
+  {
+    region: 'r3', catg: 'Visites & Panoramas',
+    name: 'Île de Tabarca (en bateau depuis Santa Pola)',
+    desc: 'Seule île habitée de la Communauté Valencienne, réserve marine aux eaux transparentes. Village fortifié du XVIIIe, ruelles blanches, plage et snorkeling. Bateaux fréquents depuis le port de Santa Pola (~25 min de traversée, billet flexible aller-retour).',
+    dist: '48 km · 45 min (jusqu\'au port de Santa Pola)', type: 'insolite',
+    walk: false, tested: false, avoid: false,
+    photos: []
+  },
+  {
+    region: 'r6', catg: 'Sites Historiques',
+    name: 'Castillo de San Julián',
+    desc: 'Forteresse du XVIIIe siècle au sommet du Monte San Julián (293 m), intégrant une tour anglaise de 1706. Vue panoramique sur la baie d\'Escombreras et le port. Accès libre et gratuit, mais montée assez sportive (à pied ou en voiture).',
+    dist: '48 km · 40 min', type: 'culture',
+    walk: false, tested: false, avoid: false,
+    photos: []
+  },
+  {
+    region: 'r6', catg: 'Nature & Randonnées',
+    name: 'Cala Cortina (Carthagène)',
+    desc: 'Petite plage familiale nichée entre falaises, à quelques minutes du centre. Aire de jeux pour enfants, restaurant à pied de plage (Mares Bravas), snorkeling et plongée dans une eau limpide. Régulièrement classée parmi les plus belles plages d\'Espagne.',
+    dist: '48 km · 38 min', type: 'plage',
+    walk: false, tested: false, avoid: false,
     photos: []
   },
 ];
